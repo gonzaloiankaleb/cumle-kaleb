@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡6 Años de Kaleb! 🎉</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-attachment: fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3.5em;
+            text-shadow: 3px 3px 0 #ff9f43;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite, pulse 2s infinite alternate;
+            font-weight: 700;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+            align-items: center;
+        }
+
+        .party-info {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .party-info:hover {
+            transform: scale(1.05);
+        }
+
+        .party-info h2 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-size: 2em;
+            animation: fadeIn 1s ease-in-out;
+            font-weight: 600;
+        }
+
+        .party-info p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            color: #636e72;
+            animation: slideInLeft 1s ease-in-out;
+            font-weight: 400;
+        }
+
+        .main-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .main-image:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        footer {
+            background: rgba(45, 52, 54, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px; /* Reduced padding */
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Asegura que empiece desde el borde izquierdo */
+            width: 100%;
+            font-size: 0.9em; /* Reduced font size */
+            animation: fadeIn 1s ease-in-out;
+            box-sizing: border-box; /* Incluye el padding en el ancho total */
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px; /* Reducido el espacio entre elementos */
+            }
+
+            h1 {
+                font-size: 2em; /* Reducido aún más para móviles pequeños */
+                padding: 0 10px;
+            }
+
+            .party-info {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .party-info h2 {
+                font-size: 1.5em;
+            }
+
+            .party-info p {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .main-image-container {
+                margin: 10px auto;
+                width: 90%; /* Ajuste para que no toque los bordes */
+            }
+
+            .water-player-card {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+
+            .water-player-card img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 1em;
+                width: 100%; /* Botón a ancho completo en móviles */
+                margin: 15px 0;
+            }
+
+            footer {
+                padding: 8px;
+                font-size: 0.8em;
+            }
+        }
+
+        /* Agregamos un breakpoint adicional para pantallas muy pequeñas */
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .party-info p {
+                font-size: 0.9em;
+            }
+
+            .emoji {
+                font-size: 1.2em;
+            }
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin: 0 5px;
+            animation: spin 2s linear infinite;
+            display: inline-block;
+        }
+
+        .highlight {
+            color: #e84393;
+            font-weight: bold;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .water-player-card {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .water-player-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background-color: #e84393;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #c2367b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="animate__animated animate__bounce">¡Fiesta de 6 Años de Kaleb! 🎈</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="party-info">
+                <h2>¡Te esperamos! 🎉</h2>
+                <p><span class="emoji"><i class="far fa-calendar-alt"></i></span> <span class="highlight">Fecha:</span> [22/02/2025]</p>
+                <p><span class="emoji"><i class="far fa-clock"></i></span> <span class="highlight">Hora:</span> [16:00]</p>
+                <p><span class="emoji"><i class="fas fa-map-marker-alt"></i></span> <span class="highlight">Lugar:</span> [Puan 4478 / Tonelero y Camargo]</p>
+                <p><span class="emoji"><i class="fas fa-gift"></i></span> ¡Trae tu mejor espíritu festivo!</p>
+                <p><span class="emoji"><i class="fas fa-water"></i></span> ¡Habrá un <span class="highlight">pelotero de agua</span>!</p>
+
+                <!-- Enlace de Confirmación a WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=[TuNumeroDeTelefono]&text=Hola!%20Soy%20[NombreDelInvitado]%20y%20confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Kaleb." class="cta-button" target="_blank">
+                    Confirmar Asistencia por WhatsApp <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+            <div class="main-image-container">
+                <img src="img/kaleb.png" alt="Fiesta de Kaleb" class="main-image">
+            </div>
+        </div>
+
+        <div class="water-player-card animate__animated animate__fadeInUp">
+            <h3>¡Mira quién estará en el pelotero de agua!</h3>
+            <img src="/img/sprunki-swap-showcase.webp" alt="sprunki">
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>¡Kaleb, te amamos con todo el corazón! 💖</p>
+    </footer>
+
+    <script>
+      ScrollReveal().reveal('.party-info', { delay: 200, origin: 'bottom' });
+      ScrollReveal().reveal('.main-image-container', { delay: 400, origin: 'right' });
+      ScrollReveal().reveal('.water-player-card', { delay: 600, origin: 'bottom' });
+
+        // Escucha el evento de clic en el enlace de WhatsApp
+        document.querySelector('.cta-button').addEventListener('click', function(event) {
+            // Previene la navegación inmediata
+            event.preventDefault();
+
+            // Solicita el nombre al usuario
+            const nombreInvitado = prompt("Por favor, ingresa tu nombre:");
+
+            // Verifica si el usuario ingresó un nombre
+            if (nombreInvitado) {
+                // Número de teléfono actualizado con el código de Argentina (+54)
+                const numeroTelefono = "5491155659913";
+                const mensaje = `Hola! Soy ${nombreInvitado} y confirmo mi asistencia a la fiesta de Kaleb.`;
+                const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(mensaje)}`;
+
+                // Redirige al enlace de WhatsApp
+                window.location.href = enlaceWhatsApp;
+            } else {
+                // Muestra un mensaje si el usuario no ingresó un nombre
+                alert("Debes ingresar tu nombre para confirmar la asistencia.");
+            }
+        });
+
+    </script>
+</body>
+</html>
